@@ -22,7 +22,7 @@
 ### Шаги по установке и запуску
 
 1. Клонируйте репозиторий:
-`git clone https://github.com/your-repo/abi.git`
+`git clone https://github.com/DudkevichD/abi.git`
 2. Перейдите в папку adi: `cd abi`
 3. Запустите Docker Compose: `docker-compose up --build`
 
