@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  milvus:
+    image: milvusdb/milvus:latest
+    ports:
+      - "19530:19530"
+    environment:
+      - TZ=UTC
+      - MILVUS_LOG_LEVEL=debug
+    command: ["milvus", "run", "standalone"]
+
+  app:
+    build: .
+    volumes:
+      - .:/app
+    depends_on:
+      - milvus
+    command: ["python", "main.py"]
